@@ -4,7 +4,7 @@
 int main() {
     printf("Content-type: text/html\n\n");
 
-    char *dadosRecebidos = getenv("QUERY_STRING");
+    char *recebido = getenv("QUERY_STRING");
 
     printf("<!DOCTYPE html>\n");
     printf("<html lang=\"pt-BR\">\n");
@@ -14,9 +14,9 @@ int main() {
     printf("</head>\n");
     printf("<body>\n");
     printf("<h1>Resultado do Envio</h1>\n");
-    
-    if (dadosRecebidos != NULL) {
-        printf("<p>Recebido: %s</p>\n", dadosRecebidos);
+
+    if (recebido != NULL) {
+        printf("<p>Recebido: %s</p>\n", recebido);
     } else {
         printf("<p>Nenhum dado recebido.</p>\n");
     }
